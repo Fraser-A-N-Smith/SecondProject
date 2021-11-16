@@ -8,18 +8,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.domain.TavernTable;
+import com.example.demo.service.TavernTableService;
 
 @RestController
 @RequestMapping("/user")
 public class TavernTableController {
-	
-	private List<TavernTable> tavTables = new ArrayList<>();
-	
+
+	private List<TavernTable> tavernTables = new ArrayList<>();
+
 	@Autowired
-	private TavernService service; // injecting dependencies
-	
-	public TavenTableController(TavernService service) {
+	private TavernTableService service; // injecting dependencies
+
+	public TavernTableController(TavernTableService service) {
+		super();
 		this.service = service;
 	}
+
+	
 
 }
