@@ -15,13 +15,13 @@ public class  TavernTable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@Column(name = "Name", unique = true, nullable = false)
+	@Column( unique = true)
 	private String partyName;
 	
-	@Column(name = "Tab")
+	@Column()
 	private Long partyTab;
 	
-	@Column(name = "Mage")
+	@Column()
 	private boolean hasMagic;
 
 	public TavernTable(String partyName, Long partyTab, boolean hasMagic) {
@@ -31,6 +31,25 @@ public class  TavernTable{
 		this.hasMagic = hasMagic;
 	}
 	
+
+
+	public TavernTable(long id, String partyName, Long partyTab, boolean hasMagic) {
+		super();
+		this.id = id;
+		this.partyName = partyName;
+		this.partyTab = partyTab;
+		this.hasMagic = hasMagic;
+	}
+
+
+
+	public TavernTable() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+
 	public long getId() {
 		return id;
 	}
@@ -61,6 +80,14 @@ public class  TavernTable{
 
 	public void setHasMagic(boolean hasMagic) {
 		this.hasMagic = hasMagic;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "TavernTable [id=" + id + ", partyName=" + partyName + ", partyTab=" + partyTab + ", hasMagic="
+				+ hasMagic + "]";
 	}
 	
 	
