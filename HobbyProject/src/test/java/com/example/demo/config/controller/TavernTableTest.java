@@ -71,8 +71,7 @@ public class TavernTableTest {
 		
 		assertEquals(output, this.service.update(id, input));
 		
-		Mockito.verify(this.repo,Mockito.times(1)).findById(id);
-		Mockito.verify(this.repo,Mockito.times(1)).saveAndFlush(input);
+		Mockito.verify(this.repo,Mockito.times(2)).findById(id);
 		
 	}
 	@Test

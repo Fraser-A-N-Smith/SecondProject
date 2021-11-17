@@ -60,8 +60,8 @@ public class OrderTest {
 	public void updateTest() {
 		Long id = 1l;
 		Optional<Orders> exists = Optional.of(new Orders(1l,1l,1l,1l,tavTab));
-		Orders input = new Orders(1L, 1l,1l,1l,tavTab);
-		Orders output = new Orders(1L, 1l,1l,1l,tavTab);
+		Orders input = new Orders(1L,1L,1L,tavTab);
+		Orders output = new Orders(1L, 1L,1L,1L,tavTab);
 		
 		Mockito.when(this.repo.findById(id)).thenReturn(exists);
 		Mockito.when(this.repo.saveAndFlush(input)).thenReturn(output);
@@ -70,8 +70,23 @@ public class OrderTest {
 		
 		assertEquals(output, this.service.update(id, input));
 		
-		Mockito.verify(this.repo,Mockito.times(1)).findById(id);
-		Mockito.verify(this.repo,Mockito.times(1)).saveAndFlush(input);
+		Mockito.verify(this.repo,Mockito.times(2)).findById(id);
+			
+	}
+	@Test
+	public void deleteTest() {
+		Long id =1L;
+		Boolean answer = false;
+		assertEquals(answer, this.service.delete(id));
 		
+		Mockito.verify(this.repo,Mockito.times(1)).existsById(id);
+	}
+	@Test
+	public void getByPartyNameTest() {
+		String name = "bobby";
+		Optional<Orders> tav = Optional.of(new Orders(1L, 1l,1l,1l,tavTab));
+		Mockito.when(this.repo.findByPartyName(name)).thenReturn(tav);
+		
+		assertEquals(tav.get(),this.service.getByPartyName("bobby"));
 	}
 }

@@ -48,6 +48,59 @@ public class Orders {
 	}
 
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((drinkId == null) ? 0 : drinkId.hashCode());
+		result = prime * result + ((foodId == null) ? 0 : foodId.hashCode());
+		result = prime * result + ((orderId == null) ? 0 : orderId.hashCode());
+		result = prime * result + ((tableId == null) ? 0 : tableId.hashCode());
+		result = prime * result + ((tavTab == null) ? 0 : tavTab.hashCode());
+		return result;
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Orders other = (Orders) obj;
+		if (drinkId == null) {
+			if (other.drinkId != null)
+				return false;
+		} else if (!drinkId.equals(other.drinkId))
+			return false;
+		if (foodId == null) {
+			if (other.foodId != null)
+				return false;
+		} else if (!foodId.equals(other.foodId))
+			return false;
+		if (orderId == null) {
+			if (other.orderId != null)
+				return false;
+		} else if (!orderId.equals(other.orderId))
+			return false;
+		if (tableId == null) {
+			if (other.tableId != null)
+				return false;
+		} else if (!tableId.equals(other.tableId))
+			return false;
+		if (tavTab == null) {
+			if (other.tavTab != null)
+				return false;
+		} else if (!tavTab.equals(other.tavTab))
+			return false;
+		return true;
+	}
+
+
+
 	public Orders() {
 		super();
 	}

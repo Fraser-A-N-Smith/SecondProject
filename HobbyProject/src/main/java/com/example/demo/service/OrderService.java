@@ -38,6 +38,11 @@ public class OrderService {
 		exists.setFoodId(order.getFoodId());
 		exists.setTableId(order.getTableId());
 		exists.setTavTab(order.getTavTab());
-		return this.repo.saveAndFlush(exists);
+		//testing
+		System.out.println("--------------");
+		System.out.println(exists);
+		//System.out.println(this.repo.saveAndFlush(exists));
+		this.repo.saveAndFlush(exists);
+		return exists;
 	}
 }
