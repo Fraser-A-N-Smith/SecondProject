@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,6 +20,7 @@ import com.example.demo.domain.Orders;
 import com.example.demo.domain.TavernTable;
 import com.example.demo.service.OrderService;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/order")
 public class OrderController {
@@ -37,8 +39,8 @@ public class OrderController {
 	
 	@PostMapping("/create")
 	public ResponseEntity<Orders> create(@RequestBody Orders order){
-		System.out.println(order);
-		this.orders.add(order);
+//		System.out.println(order);
+//		this.orders.add(order);
 		return new ResponseEntity<Orders>(this.service.create(order),HttpStatus.CREATED);
 	}
 	

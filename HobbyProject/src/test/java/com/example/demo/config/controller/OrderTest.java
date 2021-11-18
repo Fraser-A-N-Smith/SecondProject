@@ -6,26 +6,28 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 
 import com.example.demo.domain.Orders;
 import com.example.demo.domain.TavernTable;
 import com.example.demo.repo.OrderRepo;
 import com.example.demo.service.OrderService;
 
-@RunWith(MockitoJUnitRunner.class)
+//@RunWith(MockitoJUnitRunner.class)
+@SpringBootTest
 public class OrderTest {
 
 	
-	@InjectMocks
+//	@InjectMocks
+	@Autowired
 	private OrderService service;
 	
-	@Mock
+	@MockBean
 	private OrderRepo repo;
 	
 	@Mock

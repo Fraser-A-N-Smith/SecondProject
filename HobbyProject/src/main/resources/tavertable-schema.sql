@@ -1,3 +1,6 @@
+
+
+DROP TABLE IF EXISTS `orders`;
 DROP TABLE IF EXISTS `tavern_table` CASCADE;
 CREATE TABLE `tavern_table`
 (

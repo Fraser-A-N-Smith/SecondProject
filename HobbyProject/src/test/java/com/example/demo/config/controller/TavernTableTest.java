@@ -6,29 +6,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 
 import com.example.demo.domain.TavernTable;
 import com.example.demo.repo.TavernTableRepo;
 import com.example.demo.service.TavernTableService;
 
-import net.bytebuddy.asm.Advice.This;
-
-@RunWith(MockitoJUnitRunner.class)
-//@SpringBootTest
+//@RunWith(MockitoJUnitRunner.class)
+@SpringBootTest
 public class TavernTableTest {
 
-	@InjectMocks
-//	@Autowired
+//	@InjectMocks
+	@Autowired
 	private TavernTableService service;
 
-	@Mock
-//	@MockBean
+//	@Mock
+	@MockBean
 	private TavernTableRepo repo;
 
 	@Test
@@ -77,7 +74,7 @@ public class TavernTableTest {
 	@Test
 	public void deleteTest() {
 		Long id =1L;
-		Boolean answer = false;
+		Boolean answer = true;
 		assertEquals(answer, this.service.delete(id));
 		
 		Mockito.verify(this.repo,Mockito.times(1)).existsById(id);
