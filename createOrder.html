@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="default.css">
-    <title>Document</title>
+    <title>Make an Order</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
@@ -43,8 +43,32 @@
     </nav>
     </nav>
 
+    <div id="dataEntry">
+        <div>
+            Food Order
+            <input type="number" id="food-order">
+        </div>
+        <div>
+            Drinks Order
+            <input type="number" id="drink-order">
+        </div>
+        <div>
+            Table Number
+            <input type="number" id="table-number">
+        </div>
+        <div>
+            Party id
+            <input type="number" id="party-id">
+
+        </div>
+        <div>
+            <button id="make-order">Send my order to the Kitchen!</button>
+        </div>
+
+    </div>
 
 
+    <script src="createOrder.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
