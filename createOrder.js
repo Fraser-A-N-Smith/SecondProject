@@ -1,10 +1,15 @@
 'use strict';
 
 let updateBttn = document.querySelector('#make-order');
+console.log(updateBttn);
 let updateDrink = document.querySelector('#drink-order');
+console.log(updateDrink);
 let updateFood = document.querySelector('#food-order');
+console.log(updateFood);
 let tabelNo = document.querySelector('#table-number');
-let partyId = document.querySelector('party-id');
+console.log(tabelNo);
+let partyId = document.querySelector('#party-id');
+console.log(partyId);
 
 
 let postData = (food, drink, table, party) => {
@@ -22,7 +27,7 @@ let postData = (food, drink, table, party) => {
 };
 
 let postFetch = (object) => {
-    fetch("http://localhost:8083/createPenguin", {
+    fetch("http://localhost:9000/order/create", {
         method: "POST",
         headers: {
             "Content-type": "application/JSON",
