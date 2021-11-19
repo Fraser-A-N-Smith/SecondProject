@@ -19,8 +19,8 @@ let createCard = (obj) => {
     newTitle.classList = "card-title";
     newText.classList = "card-text";
 
-    newTitle.textContent = `Order for table ${obj.tableId}`;
-    newText.textContent = `Order : ${obj.orderId} , Food Order : ${obj.foodId} , Drinks Order : ${obj.drinkId}`;
+    newTitle.textContent = `Table : ${obj.id}`;
+    newText.textContent = `Party Name : ${obj.partyName} , Party Tab : ${obj.partyTab} , Has Mage : ${obj.hasMagic}`;
 
     newCardBody.appendChild(newTitle);
     newCardBody.appendChild(newText);
@@ -31,7 +31,7 @@ let createCard = (obj) => {
 
 let getAll = () => {
 
-    fetch(`http://localhost:9000/order/readAll`).then((response) => {
+    fetch(`http://localhost:9000/user/readAll`).then((response) => {
         if (response.status !== 200) {
             console.error(`status : ${response.status}`);
             return;
