@@ -56,18 +56,33 @@
     </nav>
     <div id="dataEntry">
         <div>
-            Order Id
-            <input type="number" id="orderId">
+            Table Number
+            <input type="number" id="table-id">
+        </div>
+        <div>
+            Party Name
+            <input type="text" id="party-name">
+        </div>
+        <div>
+            Party Tab
+            <input type="number" id="party-tab">
+        </div>
+        <div>
+            Do they have a mage?
+            <select name="got-a-mage" id="mage">
+                <option selected="selected" value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
         </div>
 
         <div>
-            <button id="make-order">Remove My Order</button>
+            <button id="make-order">Change my table</button>
         </div>
 
     </div>
 
 
-    <script src="deleteOrder.js"></script>
+    <script src="updateTable.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
