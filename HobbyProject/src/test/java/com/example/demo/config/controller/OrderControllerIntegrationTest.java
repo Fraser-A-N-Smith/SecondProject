@@ -50,7 +50,7 @@ public class OrderControllerIntegrationTest {
 
 	@Test
 	public void testDelete() throws Exception {
-		this.mvc.perform(delete("/order/delete/0")).andExpect(status().isNoContent());
+		this.mvc.perform(delete("/order/delete/1")).andExpect(status().isNoContent());
 	}
 
 	@Test
