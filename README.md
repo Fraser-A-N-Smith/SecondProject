@@ -54,8 +54,10 @@ Access the target folder using the eclipse IDE then run as a SpringBoot app. The
 
 You will be prompted with a set of web pages with full navigation betweeb them
 
+
+If you can get maven clean package to work on a fresh device, the following command line code in the target folder should set the api running
 ```
-Java -jar ims-0.0.1-jar-with-dependencies
+Java -jar HobbyProject-0.0.1-jar-with-dependencies
 ```
 
 ## Built With
