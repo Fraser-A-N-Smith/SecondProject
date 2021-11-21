@@ -1,0 +1,21 @@
+body {
+  background-color: black;
+  color: white;
+  
+}
+
+html,
+body{
+    height: 100%;
+    background-color: rgb(145, 69, 34);
+}
+
+
+body{
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("wp2361341-tavern-wallpapers.jpg");
+}
+
