@@ -10,9 +10,11 @@ It allows for the management of parties and tables with their respective orders 
 Coverage: 87.1%
 
 ## Getting Started
-
-There is no target folder because the eclipse install on the development PC has encountered a glitch and even a fresh install has not helped. The ECLIPSE IDE insists that a pom file does not exist when It quite clearly does, as is evidenced by the attached screenshots. As such to use the project, access the eclipse IDE and select the hobbyProject folder, then run it as a SpringBoot App.
-
+In order to start the applicateion first extract the HobbyProject.zip file within the repository somewhere outside of it. Then enter the target folder within the zipped file and use the following command 
+```
+Java -jar HobbyProject-0.0.1-SNAPSHOT
+```
+The API is accessible with the HTML files also found within the repo.
 
 ![Screenshot (87)](https://user-images.githubusercontent.com/90899013/142762942-36cfe793-7f82-4df4-a9bd-69116c41b882.png)
 
@@ -50,15 +52,12 @@ Tests are already set up. Access the main code with Eclipse and run coverage ove
 
 ## Deployment
 
-Access the target folder using the eclipse IDE then run as a SpringBoot app. Then open Index.html in your browser
-
-You will be prompted with a set of web pages with full navigation betweeb them
-
-
-If you can get maven clean package to work on a fresh device, the following command line code in the target folder should set the api running
+Access the target folder within the zipped file within the repo and on the command line run the following command
 ```
-Java -jar HobbyProject-0.0.1-jar-with-dependencies
+Java -jar HobbyProject-0.0.1-SNAPSHOT
 ```
+
+Then proceed to access the API through the HTML files given in the repo
 
 ## Built With
 
@@ -69,7 +68,7 @@ Java -jar HobbyProject-0.0.1-jar-with-dependencies
 We use [SemVer](http://semver.org/) for versioning.
 
 ## Authors
-* **Fraser Smith** -*Final Work* -  https://github.com/Fraser-A-N-Smith
+* **Fraser Smith** -*Work* -  https://github.com/Fraser-A-N-Smith
 
 
 ## License
